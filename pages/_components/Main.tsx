@@ -1,7 +1,7 @@
 import { LogTable } from "@/pages/_components/LogTable";
 import { FileInput } from "@/pages/_components/FileInput";
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 
 type LogEntry = {
   fileName: string;

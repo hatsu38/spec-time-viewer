@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useCallback } from 'react';
 
 type FileInputProps = {
   setLogEntries: (entries: LogEntry[]) => void;
@@ -10,8 +10,6 @@ type LogEntry = {
 };
 
 export const FileInput: React.FC<FileInputProps> = ({ setLogEntries }) => {
-  const [file, setFile] = useState<File | null>(null);
-
   const parseLogFile = (content: string): LogEntry[] => {
     const lines = content.trim().split('\n');
     return lines.map(line => {
@@ -36,7 +34,7 @@ export const FileInput: React.FC<FileInputProps> = ({ setLogEntries }) => {
       };
       reader.readAsText(file);
     }
-  }, []);
+  }, [setLogEntries]);
 
 
   return (
