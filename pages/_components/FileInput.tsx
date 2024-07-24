@@ -9,7 +9,7 @@ type LogEntry = {
   executionTime: number;
 };
 
-export const FileInput: React.FC<FileInputProps> = ({ setLogEntries }) => {
+const FileInput: React.FC<FileInputProps> = ({ setLogEntries }) => {
   const parseLogFile = (content: string): LogEntry[] => {
     const lines = content.trim().split('\n');
     return lines.map(line => {
@@ -57,3 +57,5 @@ export const FileInput: React.FC<FileInputProps> = ({ setLogEntries }) => {
   </div>
   );
 }
+
+export default FileInput;

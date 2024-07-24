@@ -12,7 +12,7 @@ type PropsType = {
   setLogEntries: (entries: LogEntry[]) => void;
 };
 
-export const LogTable: React.FC<PropsType> = ({ logEntries, setLogEntries }: PropsType) => {
+const LogTable: React.FC<PropsType> = ({ logEntries, setLogEntries }: PropsType) => {
   const [sortKey, setSortKey] = useState<SortKey>('executionTime');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
   const [searchTerm, setSearchTerm] = useState<string>('');
@@ -124,3 +124,5 @@ export const LogTable: React.FC<PropsType> = ({ logEntries, setLogEntries }: Pro
     </div>
   );
 };
+
+export default LogTable;

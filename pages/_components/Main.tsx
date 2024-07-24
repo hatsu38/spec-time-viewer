@@ -1,5 +1,5 @@
-import { LogTable } from "@/_components/LogTable";
-import { FileInput } from "@/_components/FileInput";
+import LogTable from "@/pages/_components/LogTable";
+import FileInput from "@/pages/_components/FileInput";
 
 import React, { useState } from 'react';
 
@@ -8,7 +8,7 @@ type LogEntry = {
   executionTime: number;
 };
 
-export const Main: React.FC = () => {
+const Main: React.FC = () => {
   const [logEntries, setLogEntries] = useState<LogEntry[]>([]);
 
   return (
@@ -20,3 +20,5 @@ export const Main: React.FC = () => {
     </div>
   );
 };
+
+export default Main;
