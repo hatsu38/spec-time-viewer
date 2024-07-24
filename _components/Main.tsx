@@ -1,5 +1,5 @@
-import { LogTable } from "@/pages/_components/LogTable";
-import { FileInput } from "@/pages/_components/FileInput";
+import { LogTable } from "@/_components/LogTable";
+import { FileInput } from "@/_components/FileInput";
 
 import React, { useState } from 'react';
 
